@@ -1,0 +1,58 @@
+version: '3'
+services:
+  jackett:
+      restart: always
+      volumes:
+          - './pi/home/media/jackettconfig:/config'
+          - './pi/storage/transmission/:/downloads'
+          - './pi/etc/localtime:/etc/localtime:ro'
+      environment:
+          - PGID=1001
+          - PUID=1001
+          - TZ=America/Argentina/Buenos_Aires
+      image: linuxserver/jackett
+  plex:
+      restart: always
+      environment:
+          - VERSION=latest
+          - PUID=1001
+          - PGID=1001
+          - TZ=America/Argentina/Buenos_Aires
+      volumes:
+          - './pi/home/media/plexconfig/:/config'
+          - ./pi/home/nginx/config/keys
+          - './pi/storage/plexmedialibrary/TV Shows/:/data/tvshows'
+          - './pi/storage/plexmedialibrary/Movies/:/data/movies'
+          - './pi/storage/plexmedialibrary/Anime/:/data/anime'
+          - './pi/home/media/transcode:/transcode'
+      image: linuxserver/plex
+  radarr:
+      restart: always
+      ports:
+          - '7878:7878'
+      volumes:
+          - './pi/home/media/radarrconfig:/config'
+          - './pi/storage/transmission/:/downloads'
+          - './pi/storage/plexmedialibrary/Movies/:/data/movies'
+          - './pi/storage/plexmedialibrary/Anime/:/data/anime'
+          # - '/etc/localtime:/etc/localtime:ro'
+      environment:
+          - TZ=America/Argentina/Buenos_Aires
+          - PGID=1001
+          - PUID=1001
+      image: linuxserver/radarr
+  sonarr:
+      restart: always
+      ports:
+          - '8989:8989'
+      environment:
+          - TZ=America/Argentina/Buenos_Aires
+          - PUID=1001
+          - PGID=1001
+      volumes:
+          - './pi/etc/localtime:/etc/localtime:ro'
+          - './pi/home/media/sonarrconfig:/config'
+          - './pi/storage/plexmedialibrary/TV Shows/:/data/tv'
+          - './pi/storage/plexmedialibrary/Anime/:/data/anime'
+          - './pi/storage/transmission/:/downloads'
+      image: linuxserver/sonarr
