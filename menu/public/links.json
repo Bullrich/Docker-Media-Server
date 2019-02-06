@@ -1,0 +1,31 @@
+{
+  "apps": [
+    {
+      "name": "Plex",
+      "image": "plex.png",
+      "port": 32400,
+      "web": "web"
+    },
+    {
+      "name": "Radarr",
+      "image": "radarr.png",
+      "port": 7878
+    },
+    {
+      "name": "Sonarr",
+      "image": "sonarr.png",
+      "port": 8989
+    },
+    {
+      "name": "Jackett",
+      "image": "jackett.png",
+      "port": 9117,
+      "web": "web"
+    },
+    {
+      "name": "Transmission",
+      "image": "transmission.png",
+      "port": 9091
+    }
+  ]
+}

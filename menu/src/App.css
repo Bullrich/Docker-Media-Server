@@ -1,0 +1,6 @@
+@import "css/global.css";
+@import "css/style.css";
+#root
+{
+    height: 100%;
+}

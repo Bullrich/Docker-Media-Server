@@ -6,11 +6,11 @@ I made this for a Raspberry Pi, hence the volume is referenced to `./pi`, but yo
 
 ## Images and their URIs
 
-- Heimdall: [your-ip:80](0.0.0.0:80)
+- Main Menu: [your-ip:80](0.0.0.0:80)
 - Plex: [your-ip:32400/web](0.0.0.0:32400/web)
 - Radarr: [your-ip:7878](0.0.0.0:7878)
 - Sonarr: [your-ip:8989](0.0.0.0:8989)
-- Jacket: [your-ip:9117](0.0.0.0:9117)
+- Jackett: [your-ip:9117](0.0.0.0:9117)
 - Transmission: [your-ip:9091](0.0.0.0:9091)
 
 ## Requirement
@@ -21,9 +21,9 @@ I made this for a Raspberry Pi, hence the volume is referenced to `./pi`, but yo
 
 First, ensure you have Docker running and you are in the project directory, then run the following command `docker-compose up`.
 
-Docker should download all the images and start the servers. First time it boot up it takes some time to load the dashboard.
+Docker should download or build all the images and start the servers. 
 
-You can configure Heimdall's dashboard to have all the urls at hand without having to use the port numbers.
+You have a main menu at port 80 which redirects you to the other apps for easy use.
 
 ## Configuration
 
