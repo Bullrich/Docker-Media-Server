@@ -74,7 +74,7 @@ services:
       - PGID=1001
     volumes:
       - "./pi/home/media/sonarrconfig:/config"
-      - "./pi/storage/plexmedialibrary/TV Shows/:/data/tv"
+      - "./pi/storage/plexmedialibrary/tv-shows/:/data/tv"
       - "./pi/storage/plexmedialibrary/Anime/:/data/anime"
       - "./pi/storage/transmission/:/downloads"
     links:
