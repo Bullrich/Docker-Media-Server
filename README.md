@@ -16,6 +16,7 @@ I made this for a Raspberry Pi, hence the volume is referenced to `./pi`, but yo
 ## Requirement
 
 - [Docker](https://docs.docker.com/install/)
+- Some knowledge of all the services. This guide tells you how to install and link them, but not how to properly use them.
 
 ## How to use
 
@@ -52,6 +53,10 @@ Fill the values as
 |Port|9091|
 |Username|admin|
 |Password|admin|
+
+##### Important
+
+Be aware that each network has its own name. So, while Transmission is in `localhost:9091`, to access it, each service need to replace `localhost` for `transmission` (or the network name assigned in the `docker-compose` file).
 
 #### Adding Jackett indexers
 

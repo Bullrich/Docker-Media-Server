@@ -17,7 +17,7 @@ services:
     environment:
       - PGID=1001
       - PUID=1001
-      - TZ=America/Argentina/Buenos_Aires
+      - TZ=Europe/Vienna
     image: linuxserver/jackett
   plex:
     container_name: plex
@@ -26,7 +26,7 @@ services:
       - VERSION=latest
       - PUID=1001
       - PGID=1001
-      - TZ=America/Argentina/Buenos_Aires
+      - TZ=Europe/Vienna
     ports:
       - "32400:32400/tcp"
       - "3005:3005/tcp"
@@ -56,7 +56,7 @@ services:
       - "./pi/storage/plexmedialibrary/Movies/:/data/movies"
       - "./pi/storage/plexmedialibrary/Anime/:/data/anime"
     environment:
-      - TZ=America/Argentina/Buenos_Aires
+      - TZ=Europe/Vienna
       - PGID=1001
       - PUID=1001
     depends_on:
@@ -69,7 +69,7 @@ services:
     ports:
       - "8989:8989"
     environment:
-      - TZ=America/Argentina/Buenos_Aires
+      - TZ=Europe/Vienna
       - PUID=1001
       - PGID=1001
     volumes:
@@ -91,7 +91,7 @@ services:
       - 9091:9091
       - 51413:51413/udp
     environment:
-      - TZ=America/Argentina/Buenos_Aires
+      - TZ=Europe/Vienna
       - PUID=1001
       - PGID=1001
     volumes:
