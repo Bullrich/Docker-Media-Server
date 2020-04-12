@@ -15,7 +15,7 @@ class LinkList extends Component {
               <LinkItem
                 key={i}
                 name={app.name}
-                url={app.url}
+                url={app.web}
                 img={app.image}
                 port={app.port}
               />
