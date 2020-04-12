@@ -19,8 +19,7 @@
     {
       "name": "Jackett",
       "image": "jackett.png",
-      "port": 9117,
-      "web": "web"
+      "port": 9117
     },
     {
       "name": "Transmission",

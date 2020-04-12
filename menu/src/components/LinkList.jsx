@@ -11,6 +11,7 @@ class LinkList extends Component {
           className="flex wrap center vertical-center"
         >
           {this.props.apps.map((app, i) => {
+            console.log(app);
             return (
               <LinkItem
                 key={i}

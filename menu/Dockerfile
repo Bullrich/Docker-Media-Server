@@ -1,6 +1,6 @@
 FROM node:11.9 as builder
 
-LABEL mantainer="Javier Bullrich <javierbullrich@gmail.com>"
+LABEL mantainer="Javier Bullrich <javier@bullrich.dev>"
 
 WORKDIR /usr/src/app
 
