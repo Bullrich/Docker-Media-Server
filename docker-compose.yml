@@ -75,7 +75,7 @@ services:
     volumes:
       - "./pi/home/media/sonarrconfig:/config"
       - "./pi/storage/plexmedialibrary/tv-shows/:/data/tv"
-      - "./pi/storage/plexmedialibrary/Anime/:/data/anime"
+      - "./pi/storage/plexmedialibrary/anime/:/data/anime"
       - "./pi/storage/transmission/:/downloads"
     links:
       - jackett
